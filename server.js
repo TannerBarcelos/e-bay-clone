@@ -38,7 +38,7 @@ app.use(express.urlencoded({
 app.use(bodyParser.json());
 
 //another test
-app.all('/search', (req, res) => {
+app.post('/search', (req, res) => {
   //grab the search input and make a api request object (ebay tutorials)
   const search = req.body.search_;
   let uri_ = encodeURI(search);
