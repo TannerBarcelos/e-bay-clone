@@ -3,7 +3,11 @@ import axios from 'axios';
 //this will be asyncronous so we need redux thunk (passed into the create store in root index)!
 // : this performs the request to the express endpoint to produce the ebay api searhc result
 export const populateItemStore = data => async dispatch => {
-  const results = await axios.post('/search', {
+
+  // local or production
+  const API = process.env.NODE_ENV === 'production' ? 'https://ebay-clone-react.herokuapp.com/search' : 'http://localhost:4000/search';
+
+  const results = await axios.post(API, {
     search_: data,
   });
 
