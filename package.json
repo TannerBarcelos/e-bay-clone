@@ -2,11 +2,11 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "client": "cd client && npm start",
     "start": "node server.js",
-    "dev": "concurrently \"nodemon app.js\" \"npm run client\"",
+    "dev": "concurrently \"nodemon server.js\" \"npm run client\"",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "",
