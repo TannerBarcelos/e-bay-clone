@@ -38,51 +38,45 @@ class SearchBar extends Component {
   };
 
   render() {
-    return ( <
-      div className = "main" >
-      <
-      form className = "example"
-      onSubmit = {
-        this.handleSubmit
-      } >
-      <
-      div id = "inp"
-      className = "input-group mb-3"
-      style = {
-        {
-          width: '70vw',
-          margin: 'auto'
-        }
-      } >
-      <
-      input type = "text"
-      className = "form-control"
-      placeholder = "Search"
-      aria - label = "Recipient's username"
-      aria - describedby = "button-addon2"
-      id = "searchQuery"
-      name = "search"
-      value = {
-        this.state.currentChar
-      }
-      onChange = {
-        this.handleChange
-      }
-      /> <
-      div className = "input-group-append" >
-      <
-      button className = "btn btn-outline-secondary"
-      type = "button"
-      id = "button-addon2"
-      onClick = {
-        this.handleSubmit
-      } >
-      Search <
-      /button> <
-      /div> <
-      /div> <
-      /form> <
-      /div>
+    return (
+      <div className="main" >
+        <form className="example"
+          onSubmit={
+            this.handleSubmit
+          }>
+          <div id="inp"
+            className="input-group mb-3"
+            style={
+              {
+                width: '70vw',
+                margin: 'auto'
+              }
+            }>
+            <input type="text"
+              className="form-control"
+              placeholder="Search"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+              id="searchQuery"
+              name="search"
+              value={
+                this.state.currentChar
+              }
+              onChange={
+                this.handleChange
+              }
+            /> <div className="input-group-append" >
+              <button className="btn btn-outline-secondary"
+                type="button"
+                id="button-addon2"
+                onClick={
+                  this.handleSubmit
+                }>
+                Search </button>
+            </div>
+          </div>
+        </form>
+      </div>
     );
   }
 }
