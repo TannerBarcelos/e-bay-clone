@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*testing style works*/
+.card {
+  height: 24rem;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  display: flex;
+}
+
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.img-thumbnail {
+  border: none;
+  border-radius: 3px;
+  height: 150px;
+}
+
+h5 {
+  font-size: medium;
+  margin-bottom: 200px;
+  color: #204051;
+}
+
+a {
+  font-size: small;
+  text-decoration: none;
+  color: #204051;
+}
+
+.btn {
+  background-color: #d9eeec;
+  border: none;
+  color: #204051;
+}
+
+.btn:hover {
+  background-color: #204051 !important;
+}
+
+.bottom-btn {
+  width: 100% !important;
+  margin-top: 10px;
+  position: absolute;
+  /*to get the button to stick to bottom and left: see style below (this container
+  needs to be abslutely positioned to its parent car-body div*/
+  bottom: 0px;
+  left: 0px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.card-body {
+  position: relative;
+
+}
