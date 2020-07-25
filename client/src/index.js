@@ -18,17 +18,10 @@ import reducers from './reducers';
 //common practice: create store above the render, and pass it as a prop to our provider [we need to pass apply middleware with thunk ALWAYS if our app has an action creator thats async]
 const store = createStore(reducers, applyMiddleware(thunk));
 
-//render the app wrapped in the provider that we need to send global state to all our components in the sub path of this project
-//and
 ReactDOM.render(
   //pass the redux store as a prop to the provider
-  <
-  Provider store = {
-    store
-  } >
-  <
-  App / >
-  <
-  /Provider>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );

@@ -1,4 +1,4 @@
-require ('dotenv').config (); //config the .env file
+require('dotenv').config(); //config the .env file
 
 //config object: will return the api keys, and any other environment data for the client
 export const PROCESSES = {
