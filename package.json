@@ -7,7 +7,7 @@
     "client": "cd client && npm start",
     "start": "node server.js",
     "dev": "concurrently \"nodemon app.js\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",

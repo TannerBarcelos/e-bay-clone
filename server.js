@@ -67,11 +67,11 @@ app.all('/search', (req, res) => {
   rp(options).then(data => res.send(data)).catch(err => console.log(err));
 });
 
-//Heroku production check
+//Heroku production check/setup
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'))
   app.get('*', () => {
-    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html')); //relative path
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')); //relative path
   })
 }
 
