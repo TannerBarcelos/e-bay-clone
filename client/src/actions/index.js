@@ -5,9 +5,9 @@ import axios from 'axios';
 export const populateItemStore = data => async dispatch => {
 
   // local or production
-  const API = process.env.NODE_ENV === 'production' ? 'ebay-clone-react.herokuapp.com/search' : 'http://localhost:4000/search';
+  //const API = process.env.NODE_ENV === 'production' ? 'ebay-clone-react.herokuapp.com/search' : 'http://localhost:4000/search';
 
-  const results = await axios.post(API, {
+  const results = await axios.post('/search', {
     search_: data,
   });
 
